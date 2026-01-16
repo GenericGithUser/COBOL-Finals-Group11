@@ -12,42 +12,42 @@
        FILE SECTION.
        FD OUTFILE.
        01 OUTREC.
-           05 FILLER PIC X(80).
+           05 FILLER PIC X(90).
        WORKING-STORAGE SECTION.
        01 HD01-REC.
-           05 FILLER PIC X(28) VALUE SPACES.
+           05 FILLER PIC X(30) VALUE SPACES.
            05 FILLER PIC X(25) VALUE 
                "BROWNOUT ELECTRIC COMPANY".
-           05 FILLER PIC X(27) VALUE SPACES.
+           05 FILLER PIC X(32) VALUE SPACES.
        01 HD02-REC.
-           05 FILLER PIC X(33) VALUE SPACES.
+           05 FILLER PIC X(34) VALUE SPACES.
            05 FILLER PIC X(14) VALUE "BILLING REPORT".
-           05 FILLER PIC X(33) VALUE SPACES.
+           05 FILLER PIC X(34) VALUE SPACES.
        01 SPACER.
-           05 FILLER PIC X(80) VALUE SPACES.
+           05 FILLER PIC X(90) VALUE SPACES.
        01 COLHD1-REC.
            05 FILLER PIC X(1) VALUE SPACES.
            05 FILLER PIC X(11) VALUE "Account No.".
            05 FILLER PIC X(1) VALUE SPACES.
            05 FILLER PIC X(13) VALUE "Customer Name".
-           05 FILLER PIC X(4) VALUE SPACES.
+           05 FILLER PIC X(7) VALUE SPACES.
            05 FILLER PIC X(12) VALUE "Account Type".
            05 FILLER PIC X(2) VALUE SPACES.
            05 FILLER PIC X(8) VALUE "Kwh Used".
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(5) VALUE SPACES.
            05 FILLER PIC X(14) VALUE "System Charges".
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(5) VALUE SPACES.
            05 FILLER PIC X(11) VALUE "Total  Bill".
        01 REC-OUT.
            05 FILLER PIC X(1) VALUE SPACES.
            05 ACC-NO-OUT PIC X(10).
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(3) VALUE SPACES.
            05 CUS-NAM-OUT PIC X(20).
            05 ACC-TYP-OUT PIC X(11).
            05 KW-USED-OUT PIC Z(6).
-           05 FILLER PIC X(2) VALUE SPACES.
+           05 FILLER PIC X(10) VALUE SPACES.
            05 SYS-CHAR-OUT PIC Z,ZZZ.ZZ.
-           05 FILLER PIC X(4) VALUE SPACES.
+           05 FILLER PIC X(10) VALUE SPACES.
            05 TOT-BIL-OUT PIC ZZ,ZZZ.ZZ.
        01 REC-IN.
            05 ACC-NO-IN PIC X(10).

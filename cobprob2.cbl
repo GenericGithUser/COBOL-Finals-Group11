@@ -25,7 +25,7 @@
            05 FILLER PIC X(32) VALUE SPACES.
        01 HD03-REC.
            05 FILLER PIC X(24) VALUE SPACES.
-           05 FILLER PIC X(32) VALUE "Student’s Statement of Account".
+           05 FILLER PIC X(32) VALUE "Student's Statement of Account".
            05 FILLER PIC X(24) VALUE SPACES.
        01 SPACER.
            05 FILLER PIC X(80) VALUE SPACES.
@@ -162,7 +162,6 @@
            PERFORM PRINT-RTN THRU PRINT-END.
            DISPLAY (18, 1) "INPUT ANOTHER RECORD (Y/N)".
            PERFORM ANS-CHK-RTN UNTIL VALID-FLAG = 1.
-           MOVE 0 TO VALID-FLAG.
        PROCESS-END.
            EXIT.
        COURSE-RTN.

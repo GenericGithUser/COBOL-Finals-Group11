@@ -40,16 +40,16 @@
                "2010-2011".
            05 FILLER PIC X(39) VALUE SPACES.    
        01 SPACER.
-           05 FILLER PIC X(80) VALUE SPACES.  
+           05 FILLER PIC X(90) VALUE SPACES.  
 
        01 COLHD1-REC.
-           05 FILLER PIC X(2) VALUE SPACES.
+           05 FILLER PIC X(1) VALUE SPACES.
            05 FILLER PIC X(13) VALUE "Location Name".
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(2) VALUE SPACES.
            05 FILLER PIC X(20) VALUE "Total No. of Courses".
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(2) VALUE SPACES.
            05 FILLER PIC X(30) VALUE "Total No. of Enrolled Students".
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(2) VALUE SPACES.
            05 FILLER PIC X(18) VALUE "Total No. Faculty ".
            05 FILLER PIC X(2) VALUE SPACES.
 
@@ -139,7 +139,8 @@
            DISPLAY (6, 1) HD04-REC.
            DISPLAY (7, 1) HD05-REC.
            DISPLAY (8, 1) SPACER.
-
+           MOVE 0 TO TOTNO-FAC-IN.
+           
            DISPLAY (9, 1) "Location Branch Code: ".
            PERFORM BRA-COD-RTN.
            MOVE 0 TO VALID-FLAG.
@@ -179,9 +180,11 @@
            PERFORM PRINT-RTN THRU PRINT-END.
 
            MOVE 0 TO VALID-FLAG.
+           
 
            DISPLAY (17, 1) "Input Another Record (Y/N)?".
            PERFORM ANS-CHK-RTN UNTIL VALID-FLAG = 1.
+           
 
        PROCESS-END.
            EXIT.

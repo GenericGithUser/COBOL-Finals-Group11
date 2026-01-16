@@ -12,7 +12,7 @@
        FILE SECTION.
        FD OUTFILE.
        01 OUTREC.
-           05 FILLER PIC X(80).
+           05 FILLER PIC X(85).
        WORKING-STORAGE SECTION.
        01 HD01-REC.
            05 FILLER PIC X(23) VALUE SPACES.
@@ -25,15 +25,15 @@
                "IT Professional Board Exam Result".
            05 FILLER PIC X(23) VALUE SPACES.
        01 SPACER.
-           05 FILLER PIC X(80) VALUE SPACES.
+           05 FILLER PIC X(85) VALUE SPACES.
        01 COLHD1-REC.
            05 FILLER PIC X(5) VALUE SPACES.
            05 FILLER PIC X(8) VALUE "Examinee".
            05 FILLER PIC X(3) VALUE SPACES.
            05 FILLER PIC X(8) VALUE "Examinee".
-           05 FILLER PIC X(7) VALUE SPACES.
+           05 FILLER PIC X(10) VALUE SPACES.
            05 FILLER PIC X(13) VALUE "Date of Birth".
-           05 FILLER PIC X(8) VALUE SPACES.
+           05 FILLER PIC X(5) VALUE SPACES.
            05 FILLER PIC X(10) VALUE "University".
            05 FILLER PIC X(4) VALUE SPACES.
            05 FILLER PIC X(6) VALUE "Course".
@@ -45,19 +45,20 @@
            05 FILLER PIC X(3) VALUE "No.".
            05 FILLER PIC X(8) VALUE SPACES.
            05 FILLER PIC X(4) VALUE "Name".
-           05 FILLER PIC X(30) VALUE SPACES.
+           05 FILLER PIC X(33) VALUE SPACES.
            05 FILLER PIC X(4) VALUE "Name".
-           05 FILLER PIC X(5) VALUE SPACES.
+           05 FILLER PIC X(8) VALUE SPACES.
            05 FILLER PIC X(8) VALUE "Name".
        01 REC-OUT.
-           05 FILLER PIC X(1) VALUE SPACES.
+           05 FILLER PIC X(2) VALUE SPACES.
            05 EXA-NO-OUT PIC 9(10).
            05 FILLER PIC X(3) VALUE SPACES.
            05 EXA-NAM-OUT PIC X(20).
            05 DOB-OUT PIC X(20).
            05 UNAME-OUT PIC X(5).
+           05 FILLER PIC X(7) VALUE SPACES.
            05 C-NAME-OUT PIC X(4).
-           05 FILLER PIC X(3) VALUE SPACES.
+           05 FILLER PIC X(5) VALUE SPACES.
            05 REMARK-OUT PIC X(6).
        01 TOTPAS.
            05 FILLER PIC X(21) VALUE "TOTAL NO. OF PASSED: ".

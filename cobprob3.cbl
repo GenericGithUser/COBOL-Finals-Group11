@@ -25,7 +25,7 @@
            05 FILLER PIC X(34) VALUE SPACES.
        01 HD03-REC.
            05 FILLER PIC X(30) VALUE SPACES.
-           05 FILLER PIC X(20) VALUE "Customer’s Account".
+           05 FILLER PIC X(20) VALUE "Customer's Account".
            05 FILLER PIC X(30) VALUE SPACES.
        01 SPACER.
            05 FILLER PIC X(80) VALUE SPACES.
@@ -41,11 +41,12 @@
            05 FILLER PIC X(3) VALUE SPACES.
            05 FILLER PIC X(7) VALUE "Balance".
        01 REC-OUT.
+           05 FILLER PIC X(2) VALUE SPACES.
            05 ACC-NO-OUT PIC 9(10).
            05 FILLER PIC X(3) VALUE SPACES.
-           05 ACC-NAME-OUT PIC X(25).
+           05 ACC-NAME-OUT PIC X(22).
            05 TRANSAC-NAME-OUT PIC X(12).
-           05 FILLER PIC X(4) VALUE SPACES.
+           05 FILLER PIC X(6) VALUE SPACES.
            05 ACC-TYP-NAM-OUT PIC X(10).
            05 BALANCE-OUT PIC ZZZ,ZZZ,ZZ9.99.
       
@@ -145,7 +146,6 @@
            PERFORM PRINT-RTN THRU PRINT-END.
            DISPLAY (18, 1) "INPUT ANOTHER RECORD(Y/N)?: "
            PERFORM ANS-CHK-RTN UNTIL VALID-FLAG = 1.
-           MOVE 0 TO VALID-FLAG.
        PROCESS-END.
            EXIT.
 
@@ -300,7 +300,6 @@
            MOVE ACC-NAME-IN TO ACC-NAME-OUT.
            MOVE TRANSAC-NAME-IN TO TRANSAC-NAME-OUT.
            MOVE ACC-TYP-NAM-IN TO ACC-TYP-NAM-OUT.
-           DISPLAY (18, 1) REC-OUT.
            WRITE OUTREC FROM REC-OUT AFTER ADVANCING 1 LINE.
        PRINT-END.
            EXIT.
